@@ -8,6 +8,13 @@
 import UIKit
 
 class MemoTableViewController: UITableViewController {
+    let formatter: DateFormatter = {
+       let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .short
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +32,14 @@ class MemoTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return Memo.dummyMemoList.count
     }
-
+        // [indexPath : 목록 내에서 특정 셀의 위치, 즉 몇번째 셀인지 알려주는 역할을 한다.]
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         let target = Memo.dummyMemoList[indexPath.row]
+        // [ 본 프로젝트에서 사용하는 셀은 Subtitle 스타일이다. Subtitle 스타일은 textLabel, detailTextLabel로 구성 된다.]
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = target.insertDate.description
+        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
 
         return cell
     }
