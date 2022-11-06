@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		0695D3312917C1D200942D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3302917C1D200942D94 /* AppDelegate.swift */; };
 		0695D3332917C1D200942D94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3322917C1D200942D94 /* SceneDelegate.swift */; };
-		0695D3352917C1D200942D94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3342917C1D200942D94 /* ViewController.swift */; };
 		0695D3382917C1D200942D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0695D3362917C1D200942D94 /* Main.storyboard */; };
 		0695D33B2917C1D200942D94 /* YeonsMemoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3392917C1D200942D94 /* YeonsMemoApp.xcdatamodeld */; };
 		0695D33D2917C1D800942D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0695D33C2917C1D800942D94 /* Assets.xcassets */; };
 		0695D3402917C1D800942D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0695D33E2917C1D800942D94 /* LaunchScreen.storyboard */; };
+		0695D3492917E7CC00942D94 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695D3482917E7CC00942D94 /* Model.swift */; };
+		0695D34B2917EA0F00942D94 /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695D34A2917EA0F00942D94 /* MemoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0695D32D2917C1D200942D94 /* YeonsMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeonsMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0695D3302917C1D200942D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0695D3322917C1D200942D94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0695D3342917C1D200942D94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0695D3372917C1D200942D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0695D33A2917C1D200942D94 /* YeonsMemoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YeonsMemoApp.xcdatamodel; sourceTree = "<group>"; };
 		0695D33C2917C1D800942D94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0695D33F2917C1D800942D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0695D3412917C1D800942D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0695D3482917E7CC00942D94 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0695D34A2917EA0F00942D94 /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,25 @@
 		0695D32F2917C1D200942D94 /* YeonsMemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				0695D3472917E7A200942D94 /* Model */,
 				0695D3302917C1D200942D94 /* AppDelegate.swift */,
 				0695D3322917C1D200942D94 /* SceneDelegate.swift */,
-				0695D3342917C1D200942D94 /* ViewController.swift */,
 				0695D3362917C1D200942D94 /* Main.storyboard */,
 				0695D33C2917C1D800942D94 /* Assets.xcassets */,
 				0695D33E2917C1D800942D94 /* LaunchScreen.storyboard */,
 				0695D3412917C1D800942D94 /* Info.plist */,
 				0695D3392917C1D200942D94 /* YeonsMemoApp.xcdatamodeld */,
+				0695D34A2917EA0F00942D94 /* MemoTableViewController.swift */,
 			);
 			path = YeonsMemoApp;
+			sourceTree = "<group>";
+		};
+		0695D3472917E7A200942D94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0695D3482917E7CC00942D94 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0695D3352917C1D200942D94 /* ViewController.swift in Sources */,
+				0695D34B2917EA0F00942D94 /* MemoTableViewController.swift in Sources */,
 				0695D3312917C1D200942D94 /* AppDelegate.swift in Sources */,
 				0695D33B2917C1D200942D94 /* YeonsMemoApp.xcdatamodeld in Sources */,
 				0695D3332917C1D200942D94 /* SceneDelegate.swift in Sources */,
+				0695D3492917E7CC00942D94 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
